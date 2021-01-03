@@ -1,0 +1,157 @@
+
+PLAY [all] *********************************************************************************************
+
+TASK [shell] *******************************************************************************************
+changed: [192.168.88.21] => (item=hostname)
+changed: [192.168.88.72] => (item=hostname)
+changed: [192.168.88.21] => (item=uptime)
+changed: [192.168.88.72] => (item=uptime)
+
+TASK [debug] *******************************************************************************************
+ok: [192.168.88.21] => {
+    "out.results": [
+        {
+            "ansible_facts": {
+                "discovered_interpreter_python": "/usr/bin/python3.7"
+            },
+            "ansible_loop_var": "item",
+            "changed": true,
+            "cmd": "hostname",
+            "delta": "0:00:00.011750",
+            "end": "2021-01-03 23:59:33.652919",
+            "failed": false,
+            "invocation": {
+                "module_args": {
+                    "_raw_params": "hostname",
+                    "_uses_shell": true,
+                    "argv": null,
+                    "chdir": null,
+                    "creates": null,
+                    "executable": null,
+                    "removes": null,
+                    "stdin": null,
+                    "stdin_add_newline": true,
+                    "strip_empty_ends": true,
+                    "warn": true
+                }
+            },
+            "item": "hostname",
+            "rc": 0,
+            "start": "2021-01-03 23:59:33.641169",
+            "stderr": "",
+            "stderr_lines": [],
+            "stdout": "debian10",
+            "stdout_lines": [
+                "debian10"
+            ]
+        },
+        {
+            "ansible_loop_var": "item",
+            "changed": true,
+            "cmd": "uptime",
+            "delta": "0:00:00.005167",
+            "end": "2021-01-03 23:59:34.041778",
+            "failed": false,
+            "invocation": {
+                "module_args": {
+                    "_raw_params": "uptime",
+                    "_uses_shell": true,
+                    "argv": null,
+                    "chdir": null,
+                    "creates": null,
+                    "executable": null,
+                    "removes": null,
+                    "stdin": null,
+                    "stdin_add_newline": true,
+                    "strip_empty_ends": true,
+                    "warn": true
+                }
+            },
+            "item": "uptime",
+            "rc": 0,
+            "start": "2021-01-03 23:59:34.036611",
+            "stderr": "",
+            "stderr_lines": [],
+            "stdout": " 23:59:34 up 1 day, 10:01,  3 users,  load average: 0.08, 0.17, 0.16",
+            "stdout_lines": [
+                " 23:59:34 up 1 day, 10:01,  3 users,  load average: 0.08, 0.17, 0.16"
+            ]
+        }
+    ]
+}
+ok: [192.168.88.72] => {
+    "out.results": [
+        {
+            "ansible_facts": {
+                "discovered_interpreter_python": "/usr/bin/python3"
+            },
+            "ansible_loop_var": "item",
+            "changed": true,
+            "cmd": "hostname",
+            "delta": "0:00:00.011238",
+            "end": "2021-01-03 23:59:33.658116",
+            "failed": false,
+            "invocation": {
+                "module_args": {
+                    "_raw_params": "hostname",
+                    "_uses_shell": true,
+                    "argv": null,
+                    "chdir": null,
+                    "creates": null,
+                    "executable": null,
+                    "removes": null,
+                    "stdin": null,
+                    "stdin_add_newline": true,
+                    "strip_empty_ends": true,
+                    "warn": true
+                }
+            },
+            "item": "hostname",
+            "rc": 0,
+            "start": "2021-01-03 23:59:33.646878",
+            "stderr": "",
+            "stderr_lines": [],
+            "stdout": "i5-7200u",
+            "stdout_lines": [
+                "i5-7200u"
+            ]
+        },
+        {
+            "ansible_loop_var": "item",
+            "changed": true,
+            "cmd": "uptime",
+            "delta": "0:00:00.005190",
+            "end": "2021-01-03 23:59:34.047885",
+            "failed": false,
+            "invocation": {
+                "module_args": {
+                    "_raw_params": "uptime",
+                    "_uses_shell": true,
+                    "argv": null,
+                    "chdir": null,
+                    "creates": null,
+                    "executable": null,
+                    "removes": null,
+                    "stdin": null,
+                    "stdin_add_newline": true,
+                    "strip_empty_ends": true,
+                    "warn": true
+                }
+            },
+            "item": "uptime",
+            "rc": 0,
+            "start": "2021-01-03 23:59:34.042695",
+            "stderr": "",
+            "stderr_lines": [],
+            "stdout": " 23:59:34 up 15 days,  5:50,  2 users,  load average: 1.30, 1.57, 1.55",
+            "stdout_lines": [
+                " 23:59:34 up 15 days,  5:50,  2 users,  load average: 1.30, 1.57, 1.55"
+            ]
+        }
+    ]
+}
+
+PLAY RECAP *********************************************************************************************
+192.168.88.21              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+192.168.88.72              : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

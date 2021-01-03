@@ -1,0 +1,16 @@
+- hosts: all
+  ignore_unreachable: yes
+  gather_facts: no
+  tasks:
+    - name: "check sys"
+      remote_user: root
+      shell: "{{ item }}"
+      with_items:
+        - hostname
+        - uptime
+      register: out
+
+    - debug: msg=" {{ item.stdout_lines }} "
+      with_items: " {{ out.results }} "
+      loop_control:
+        label: '{{ item.stdout_lines }}'
