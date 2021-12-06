@@ -1,0 +1,1 @@
+ ansible all -i ../inv/hosts -m shell -a "hostname && uptime && free -h && echo"

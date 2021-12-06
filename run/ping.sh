@@ -1,0 +1,1 @@
+ ansible all -i ../inv/hosts -m ping 

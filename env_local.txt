@@ -1,6 +1,0 @@
-ansible 2.8.16
-  config file = /etc/ansible/ansible.cfg
-  configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
-  ansible python module location = /usr/lib/python3.7/site-packages/ansible
-  executable location = /usr/bin/ansible
-  python version = 3.7.7 (default, Jul 19 2020, 03:57:54) [GCC 8.3.0]
